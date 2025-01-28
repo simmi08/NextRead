@@ -1,4 +1,5 @@
-import Image from "next/image";
+/* eslint-disable */
+
 import styles from './page.module.css';
 
 

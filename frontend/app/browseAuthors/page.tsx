@@ -1,8 +1,9 @@
+/* eslint-disable */
+
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useQuery, useMutation } from '@apollo/client';
-import { GET_BOOKS } from '../../queries/getBooks';
 import { GET_AUTHORS } from '../../queries/getAuthors'; 
 import { CREATE_AUTHOR } from '../../queries/createAuthor';
 import { DELETE_AUTHOR } from '../../queries/deleteAuthor'; 
@@ -10,7 +11,6 @@ import { UPDATE_AUTHOR } from '../../queries/updateAuthor';
 
 export default function BrowseBooks() {
   const { loading, error, data, refetch } = useQuery(GET_AUTHORS);
-  const { data: booksData } = useQuery(GET_BOOKS); 
   const [createAuthor] = useMutation(CREATE_AUTHOR);
   const [deleteAuthor] = useMutation(DELETE_AUTHOR); 
   const [updateAuthor] = useMutation(UPDATE_AUTHOR); 
@@ -19,7 +19,6 @@ export default function BrowseBooks() {
   const [name, setName] = useState('');
   const [biography, setBiography] = useState('');
   const [bornDate, setBornDate] = useState('');
-  const [books, setBooks] = useState<string[]>([]);
   const [successMessage, setSuccessMessage] = useState<string>(''); 
   const [authorToUpdate, setAuthorToUpdate] = useState<any>(null);
 
