@@ -7,7 +7,7 @@ export default function Home() {
   return (
 <div className="flex flex-col items-center min-h-screen">
   <div className="border-2 border-gray-300 mt-3 mb-3">
-    <img src="/logoNR.png" alt="Logo" className="w-32 h-32" />
+    <img src="/logoNR.PNG" alt="Logo" className="w-32 h-32" />
   </div>
   <p className={`text-xl font-semibold font-mono font-medium mt-4 ${styles.typingEffect}`}>
     Your Next Read Recommendations
